@@ -25,9 +25,9 @@ TEMPLATES_DIR = BASE_DIR / 'templates'
 SECRET_KEY = 'django-insecure-(qr5g0m$#mis0re%9_3u02&-#(_z0urd^5-6w7604j$m#t$xm)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*','127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['*', '127.0.0.1', '.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -125,6 +125,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# WhiteNoise configuration
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
